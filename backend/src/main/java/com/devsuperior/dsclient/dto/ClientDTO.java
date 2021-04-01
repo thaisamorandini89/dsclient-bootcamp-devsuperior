@@ -10,7 +10,7 @@ public class ClientDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
-	private String nome;
+	private String name;
 	private String cpf;
 	private Double income;
 	private Instant birthDate;
@@ -19,9 +19,9 @@ public class ClientDTO implements Serializable{
 	public ClientDTO() {
 	}
 
-	public ClientDTO(Long id, String nome, String cpf, Double income, Instant birthDate, Integer children) {
+	public ClientDTO(Long id, String name, String cpf, Double income, Instant birthDate, Integer children) {
 		this.id = id;
-		this.nome = nome;
+		this.name = name;
 		this.cpf = cpf;
 		this.income = income;
 		this.birthDate = birthDate;
@@ -30,7 +30,7 @@ public class ClientDTO implements Serializable{
 	
 	public ClientDTO(Client entity) {
 		this.id = entity.getId();
-		this.nome = entity.getName();
+		this.name = entity.getName();
 		this.cpf = entity.getCpf();
 		this.income = entity.getIncome();
 		this.birthDate = entity.getBirthDate();
@@ -45,12 +45,12 @@ public class ClientDTO implements Serializable{
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getCpf() {
